@@ -1,5 +1,4 @@
-html,
-:has(:target) {
+html :has(:target) {
   scroll-behavior: smooth;
 }
 
