@@ -18,13 +18,19 @@ ul {
   list-style: none;
 }
 
+.list {
+  list-style: none;
+}
+
 a {
-  color: currentColor;
+  display: inline-flex;
   text-decoration: none;
 }
 
 button {
   cursor: pointer;
+  border: none;
+  border-radius: 0px;
 }
 
 img {
