@@ -18,10 +18,6 @@ ul {
   list-style: none;
 }
 
-.list {
-  list-style: none;
-}
-
 a {
   display: inline-flex;
   text-decoration: none;
