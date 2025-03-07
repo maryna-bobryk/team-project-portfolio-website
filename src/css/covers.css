@@ -1,1 +1,43 @@
 /* COVERS */
+.cover-cont {
+  border: 1px solid white;
+  min-width: 320px;
+  max-width: 375px;
+  min-height: 508px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-wrapper {
+  border: 3px solid white;
+  background-image: url(../img/covers/back-mob.png);
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
+.cover-list {
+  border: 1px solid red;
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: -3000px;
+  transform: rotate(16deg);
+  gap: 24px;
+}
+
+.cover-items {
+  border: 1px solid blue;
+}
+
+.cover-img {
+  width: auto;
+  border: 1px solid rgb(7, 171, 221);
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1440px) {
+}
