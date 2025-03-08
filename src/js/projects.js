@@ -10,6 +10,8 @@ const swiper = new Swiper('.swiper', {
   on: {
     slideChange: updateButtonsState, // Викликаємо функцію при зміні слайду
   },
+  touchRatio: 1, // Дозволяє свайпи
+  allowTouchMove: true, // Вмикає можливість свайпу
 });
 
 // Функція для оновлення стану кнопок
@@ -40,6 +42,8 @@ elemProjectBtnPrev.addEventListener('click', evt => {
   swiper.slidePrev();
   updateButtonsState(); // Оновлюємо стан кнопок;
 });
+
+//
 
 window.addEventListener('keydown', evt => {
   if (evt.code === 'ArrowRight') {
