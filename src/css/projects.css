@@ -11,11 +11,13 @@
 }
 
 .swiper-project {
-  width: 1376px;
+  /*  width: 1376px;*/
 }
 
-.swiper-wrapper-list {
+.swiper-project-list {
   margin-bottom: 64px;
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .swiper-slide-item {
@@ -127,6 +129,12 @@
   width: 68px;
   height: 68px;
   cursor: pointer;
+  border: none;
+}
+
+.swiper-project-btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .swiper-project-btn-prev-icon-svg {
