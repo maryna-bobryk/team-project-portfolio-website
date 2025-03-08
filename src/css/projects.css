@@ -117,6 +117,7 @@
   padding: 18px;
   width: 68px;
   height: 68px;
+  cursor: pointer;
 }
 
 .swiper-project-btn-next {
@@ -125,9 +126,15 @@
   padding: 18px;
   width: 68px;
   height: 68px;
+  cursor: pointer;
 }
 
 .swiper-project-btn-prev-icon-svg {
   fill: transparent;
   stroke: #3b3b3b;
+}
+
+.swiper-project-btn-next-icon-svg {
+  fill: transparent;
+  stroke: #fafafa;
 }
