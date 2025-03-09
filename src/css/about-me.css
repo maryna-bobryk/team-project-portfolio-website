@@ -102,11 +102,15 @@
   color: #fafafa;
 }
 
+.ac.maryna{
+  border-color: red;
+}
 
 .accordion-item{}
 .accordion-trigger{}
 .accordion-panel{}
 .accordion-text{}
+
 /* ---------------------- SKILLS --------------------- */
 .about-skills {
   display: flex;
