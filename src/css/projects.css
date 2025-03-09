@@ -120,6 +120,7 @@
   width: 52px;
   height: 52px;
   cursor: pointer;
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .swiper-project-btn-next {
@@ -129,6 +130,15 @@
   width: 52px;
   height: 52px;
   cursor: pointer;
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper-project-btn-prev:hover,
+.swiper-project-btn-prev:focus {
+}
+
+.swiper-project-btn-next:hover,
+.swiper-project-btn-next:focus {
 }
 
 .swiper-project-btn-disabled {
