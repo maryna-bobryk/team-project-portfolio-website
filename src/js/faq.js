@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     triggerClass: 'faq-question',
     panelClass: 'faq-answer',
     activeClass: 'open',
-    duration: 300, // Тривалість анімації
+    duration: 300,
+    multiple: false,
+    showFirstPanel: false,
   });
 });
