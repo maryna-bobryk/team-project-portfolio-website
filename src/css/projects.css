@@ -155,14 +155,76 @@
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
-}
-
-/* Styles for Desktop devices */
-@media only screen and (min-width: 1440px) {
   .swiper-project-list {
     margin-bottom: 64px;
   }
 
+  .swiper-slide-item {
+    min-height: 1191px;
+  }
+
+  .swiper-slide-project-describe {
+    /*height: 625px;*/
+    padding: 64px 0 64px 64px;
+  }
+
+  .swiper-slide-project-describe-skills-list {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-bottom: 164px;
+  }
+
+  .swiper-slide-project-describe-skills-item {
+    padding: 18px;
+  }
+
+  .swiper-slide-project-describe-subtitle {
+    font-size: 44px;
+    line-height: 100%;
+    max-width: 494px;
+  }
+
+  .swiper-slide-project-btn {
+    padding: 18px 50px;
+    width: 177px;
+    height: 55px;
+  }
+
+  .swiper-slide-project-img {
+    border-radius: 0 24px 24px 0;
+    height: 625px;
+    padding: 120px 37px;
+  }
+
+  .swiper-project-button {
+    gap: 12px;
+  }
+
+  .swiper-project-btn-prev {
+    padding: 18px;
+    width: 68px;
+    height: 68px;
+  }
+
+  .swiper-project-btn-next {
+    padding: 18px;
+    width: 68px;
+    height: 68px;
+  }
+
+  .swiper-project-btn-prev-icon-svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .swiper-project-btn-next-icon-svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
   .swiper-slide-item {
     min-height: 625px;
   }
@@ -175,17 +237,10 @@
     border-radius: 24px 0 0 24px;
 
     height: 625px;
-    padding: 64px 0 64px 64px;
   }
 
   .swiper-slide-project-describe-skills-list {
-    flex-wrap: nowrap;
-    flex-direction: row;
     margin-bottom: 223px;
-  }
-
-  .swiper-slide-project-describe-skills-item {
-    padding: 18px;
   }
 
   .swiper-slide-project-describe-subtitle {
