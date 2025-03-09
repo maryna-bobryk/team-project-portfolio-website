@@ -1,3 +1,4 @@
+/* ---------------------- ABOUT-WRAPPER ---------------------- */
 .about-wrapper {
   margin-bottom: 32px;
 }
@@ -57,9 +58,18 @@
 }
 
 .content-item-copy{
+
   overflow: hidden;
 }
 .content-item-copy .content-item-desc:first-child {
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content-item-text .content-item-desc:first-child {
+
   margin-bottom: 32px;
 }
 
@@ -106,14 +116,18 @@
   border-color: red;
 }
 
-
-
 /* ---------------------- SKILLS --------------------- */
+
 .about-skills {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+ .skills-item-active {
+   background-color: #ed3b44;
+   border: none;
+ }
 
 .skills-list {
   display: flex;
@@ -142,17 +156,14 @@
   text-align: center;
 }
 
-.active {
-  background-color: #ed3b44;
-  border: none;
-}
+ .skills-arrow-icon {
+   width: 28px;
+   height: 28px;
+   fill: none;
+   stroke: #3b3b3b;
+ }
+ /* ---------------------- SKILLS --------------------- */
 
-.skills-arrow-icon {
-  width: 28px;
-  height: 28px;
-  stroke: #3b3b3b;
-  fill: none;
-}
 
 /*---------------------- MEDIA --------------------- */
 
