@@ -1,5 +1,5 @@
 import Accordion from 'accordion-js';
-// import 'accordion-js/dist/accordion.min.css';
+import 'accordion-js/dist/accordion.min.css';
 
 const accordionParams = {
  openOnInit: [0],  // Перший елемент відкривається за замовчуванням
@@ -11,9 +11,9 @@ const accordionParams = {
  scrollOffset: 20,  // Відстань при прокручуванні
   
     // elementClass: '.ac',
-//     triggerClass: ".content-arrow",
-//     panelClass: '.content-item-copy',
-//     activeClass: 'is-active', 
+    // triggerClass: ".content-arrow",
+    // panelClass: '.content-item-copy',
+    // activeClass: 'is-active', 
 }
 
  new Accordion(".content-container", accordionParams);
