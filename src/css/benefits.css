@@ -46,6 +46,7 @@
   max-width: 344px;
   height: 270px;
   border-radius: 20px;
+  padding: 24px;
 }
 @media screen and (min-width: 1440px) {
   .benefits-cards {
@@ -56,13 +57,13 @@
 .benefits-icon {
   display: flex;
   border-radius: 10px;
-  stroke: rgba(250, 250, 250, 0.4);
+  stroke: #fafafa;
   fill: none;
   background: #ed3b44;
   width: 48px;
   height: 48px;
   align-content: center;
-  margin: 24px auto 64px 24px;
+  margin-bottom: 64px;
   padding: 12px;
 }
 
@@ -72,7 +73,6 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   color: #fafafa;
-  padding-left: 24px;
 }
 .benefits-cards-text {
   font-weight: 500;
@@ -80,7 +80,7 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-  padding-left: 24px;
+  opacity: 0.6;
 }
 .btn-benefits {
   display: block;
@@ -101,14 +101,9 @@
 .btn-benefits:hover {
   border: 1px solid #fafafa;
 }
+
 @media screen and (min-width: 768px) {
   .btn-benefits {
     margin-top: 64px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .btn-benefits {
-    margin-top: 82px;
   }
 }
