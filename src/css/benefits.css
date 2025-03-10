@@ -97,11 +97,14 @@
   letter-spacing: -0.02em;
   background-color: #1c1d20;
   color: #fafafa;
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-benefits:hover {
   border: 1px solid #fafafa;
 }
-
+.btn-benefits:focus {
+  border: 1px solid #fafafa;
+}
 @media screen and (min-width: 768px) {
   .btn-benefits {
     margin-top: 64px;
