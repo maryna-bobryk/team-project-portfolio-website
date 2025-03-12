@@ -1,5 +1,5 @@
 import iziToast from 'izitoast';
-import 'iziToast/dist/css/iziToast.min.css';
+import 'izitoast/dist/css/iziToast.min.css';
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -11,17 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalClose = document.querySelector(".modal-close");
     const modalTitle = document.querySelector(".modal-title");
     const modalMessage = document.querySelector(".modal-description");
+    const successMessage = document.createElement("p");
+
+    successMessage.classList.add("success-message");
+
 
     function openModal(title, message) {
         modalTitle.textContent = title;
         modalMessage.textContent = message;
         modalOverlay.classList.add("is-open");
-        document.body.style.overflow = "hidden"; 
+        document.body.style.overflow = "hidden";
     }
 
     function closeModal() {
         modalOverlay.classList.remove("is-open");
-        document.body.style.overflow = ""; 
+        document.body.style.overflow = "";
     }
 
     modalClose.addEventListener("click", closeModal);
@@ -45,11 +49,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     commentsInput.addEventListener("input", function () {
-        truncateInput(commentsInput, 100); 
+        truncateInput(commentsInput, 100);
+    });
+
+
+    emailInput.addEventListener("input", function () {
+        const email = emailInput.value.trim();
+        const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+         if (emailPattern.test(email)) {
+            successMessage.textContent = "Success!";
+            successMessage.style.display = "block"; 
+
+           
+            if (!emailInput.nextElementSibling || emailInput.nextElementSibling !== successMessage) {
+                emailInput.insertAdjacentElement('afterend', successMessage);
+            }
+        } else {
+            successMessage.style.opacity = "0"; 
+
+            if (emailInput.nextElementSibling === successMessage) {
+                emailInput.nextElementSibling.remove();
+            }
+        }
     });
 
     sendButton.addEventListener("click", function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         const email = emailInput.value.trim();
         const comments = commentsInput.value.trim();
@@ -59,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
             iziToast.error({
                 title: 'Error',
                 message: 'Please enter a valid email address!',
-                position: 'topRight'
+                position: 'bottomRight'
             });
             return;
         }
@@ -68,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             iziToast.error({
                 title: 'Error',
                 message: 'The comments field cannot be empty!',
-                position: 'topRight'
+                position: 'bottomRight'
             });
             return;
         }
@@ -78,27 +104,31 @@ document.addEventListener("DOMContentLoaded", function () {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ email, comment: comments }), 
+            body: JSON.stringify({ email, comment: comments }),
         })
-        .then((response) => response.json())
-        .then((data) => {
-            
-            openModal(data.title, data.message); 
-            form.reset(); 
+            .then((response) => response.json())
+            .then((data) => {
 
-            iziToast.success({
-                title: 'Success',
-                message: 'Your request has been sent successfully!',
-                position: 'topRight'
+                openModal(data.title, data.message);
+                form.reset();
+
+                iziToast.success({
+                    title: 'Success',
+                    message: 'Your request has been sent successfully!',
+                    position: 'bottomRight'
+                });
+
+                if (emailInput.nextElementSibling === successMessage) {
+                    emailInput.nextElementSibling.remove();
+                }
+            })
+            .catch((error) => {
+                iziToast.error({
+                    title: 'Error',
+                    message: 'An error occurred, please try again!',
+                    position: 'bottomRight'
+                });
+                console.error("Error:", error);
             });
-        })
-        .catch((error) => {
-            iziToast.error({
-                title: 'Error',
-                message: 'An error occurred, please try again!',
-                position: 'topRight'
-            });
-            console.error("Error:", error);
-        });
     });
 });
